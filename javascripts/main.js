@@ -14,7 +14,7 @@ function populatePage (inventory) {
         <p>Price: $${inventory[i].price}</p>
         <p>${inventory[i].description}</p>
         </div>`;
-    console.log(divVed);
+    // console.log(divVed);
     container.innerHTML += divVed;
   } 
   // Now that the DOM is loaded, establish all the event listeners needed

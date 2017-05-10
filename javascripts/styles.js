@@ -1,56 +1,66 @@
 //1. The final IIFE should augment the object with two more functions. One function resets the border thickness and background color for each car element back to the original values. The other function changes the thickness of the border of a car element, and changes its background color. The function must accept two arguments.
     //1. A car DOM element that was clicked on.
-    //1. A color name of your choice (see behavior requirement 5 above).
+    //1. A color name of your choice (see behavior requirement *8* above).
 
 //
 var CarLot = (function (originalCarLot) {
   // var carCard = ???? 
 
   originalCarLot.cardClick = function() {
-    console.log("inside styles.js cardClick()");
-    console.log(this);
+    // console.log("\n", "\n");
+    // console.log("<--------------------------------->");
+    // console.log("===================================");
+    // console.log("<--------------------------------->");
+    // console.log("\n", "\n")
+    // console.log("LET'S TAKE IT FROM THE TOP, FELLAS!");
+    var cards = document.getElementsByClassName("carCards");
+    CarLot.unSelect(cards, this);
+ 
+  };
+  originalCarLot.unSelect = function(horseHole, selection) {
+    // console.log("inside unSelect()");
+    for (var i = 0; i < horseHole.length; i++) {
+      // console.log("unSelect()-> inside fruitLooper");
+      console.log("card[", i, "] contains .selected? ", $(horseHole[i]).hasClass("selected"));
+      if ($(horseHole[i]).hasClass("selected")) {
+        horseHole[i].classList.remove("selected")
+      }
+    };
+    console.log("-- CARDS CLEAN --");
+    // console.log("closing unSelect() with CarLot.select(selection)--> should land within select()");
+    var fatBoy = "gold";
+    CarLot.select(selection, fatBoy);
+  };
+  originalCarLot.select = function(currentTarget, fatBoy) {
+    console.log(fatBoy);
+    currentTarget.classList.add("selected"); 
+    console.log(currentTarget.id, "now equipped with .selected?", $(currentTarget).hasClass("selected"));
 
-    if ($('divVed').hasClass("selected")) {
-      unSelect(); //do I need a for loop in my if condition? to run through all divVed[i]?
-    }else if ($(!this).hasClass("selected")) {
-      select();
-    } else {  
+    var selected = document.getElementsByClassName("selected");
+    selected.style.backgroundColor = fatboy;
 
-    }
+    CarLot.cursorDirect(currentTarget);
   };
-  originalCarLot.unSelect = function() {
-    removeClass("selected");
-  };
-  originalCarLot.select = function() {
-    addClass("selected");
-    CarLot.changeBorder();
-    CarLot.changeBackground();
-  };
-  originalCarLot.changeBorder = function() {
-    console.log("inside styles.js changeBorder()");
+
+  originalCarLot.cursorDirect = function() {
     
-  };
+  }
+  // originalCarLot.changeBorder = function(borderTarget) {
+  //   console.log("imaginary BORDER added successfully.");
 
-  originalCarLot.changeBorder = function() {
-    
-  };
+  //   CarLot.changeBackground(borderTarget);
+  // };
+
+  // originalCarLot.changeBackground = function(needsBackground) {
+  //   console.log("imaginary BACKGROUND added successfully");
+  //   console.log("-- FIN --");
+  //   console.log(">> Shall we go again? :D")
+  // };
 
   return originalCarLot;
 
 })(CarLot || {})
   
-//could i not just run another for loop here that toggles every single card after the first one has been selected?
-
-
-
-
-
-
-
-
-
-
-
 
 // function clickBorder (          
 
