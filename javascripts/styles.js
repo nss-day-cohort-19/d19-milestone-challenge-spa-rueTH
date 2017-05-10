@@ -28,22 +28,25 @@ var CarLot = (function (originalCarLot) {
     };
     console.log("-- CARDS CLEAN --");
     // console.log("closing unSelect() with CarLot.select(selection)--> should land within select()");
-    var fatBoy = "gold";
-    CarLot.select(selection, fatBoy);
+    var gold = "'gold'";
+    CarLot.select(selection, gold);
   };
   originalCarLot.select = function(currentTarget, fatBoy) {
     console.log(fatBoy);
+    
     currentTarget.classList.add("selected"); 
     console.log(currentTarget.id, "now equipped with .selected?", $(currentTarget).hasClass("selected"));
-
-    var selected = document.getElementsByClassName("selected");
-    selected.style.backgroundColor = fatboy;
+    
+    $(".selected").css("background-color", fatBoy);
+    $(".selected").css("border-width", "6px");
+    // currentTarget.style.backgroundColor = fatBoy;
+    // currentTarget.style.borderWidth =
 
     CarLot.cursorDirect(currentTarget);
   };
 
   originalCarLot.cursorDirect = function() {
-    
+    console.log("INSIDE cursorDirect()-- everything running until this point");
   }
   // originalCarLot.changeBorder = function(borderTarget) {
   //   console.log("imaginary BORDER added successfully.");
