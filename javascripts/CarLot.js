@@ -6,6 +6,7 @@ var CarLot = (function (CarLot) {
 
   return {
     loadInventory(callback) {
+    
       var inventoryLoader = new XMLHttpRequest();
       console.log(inventory);
       inventoryLoader.addEventListener("load", function () {
@@ -16,7 +17,8 @@ var CarLot = (function (CarLot) {
       inventoryLoader.open("GET", "inventory.JSON");
       inventoryLoader.send();
     },
-    returnInventory(){
+    //irrelevant, but required:
+    getInventory(){
       return inventory;
     }
   };
