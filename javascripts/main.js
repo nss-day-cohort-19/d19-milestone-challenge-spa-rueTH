@@ -1,3 +1,4 @@
+"use strict";
 
 function populatePage (inventory) {
   // Loop over the inventory and populate the page  

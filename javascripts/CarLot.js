@@ -1,7 +1,7 @@
-// "use strict";
+"use strict";
 
 var CarLot = (function (CarLot) {
-  console.log("inside CarLot");
+  console.log("inside NUMBER 1: CarLot");
   var inventory = [];
 
   return {
@@ -24,7 +24,6 @@ var CarLot = (function (CarLot) {
   };
 
 })(CarLot || {});
-
 //1. The first IIFE should add a public function (e.g. `loadInventory`) that loads the 
 //`inventory.json` file and stores the inventory in a private variable. It should also 
 // expose a public getter to read the array of cars (e.g. `getInventory`).
