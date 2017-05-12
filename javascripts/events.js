@@ -1,15 +1,23 @@
 "use strict";
 var CarLot = (function (originalCarLot) {
+  
+  var userInput = document.getElementById("descriptionInput");
+
   originalCarLot.activateEvents = function() {
     console.log("activateEvents is running");
     var carCards = document.getElementsByClassName("carCards");
     for (var i = 0; i < carCards.length; i++) {
       carCards[i].addEventListener('click', CarLot.cardClick);
+    };
+  };
+  originalCarLot.enableInput = function (stillTheTarget) {
+    userInput.removeAttribute("disabled");
+    CarLot.cursorDirect(stillTheTarget);
+  };
   originalCarLot.cursorDirect = function getFocus() {
-    document.getElementById("descriptionInput").focus();
-  }
-      }
-    }
+    userInput.focus();
+  };
+
 //add a class "selected"
   //   element.classList.add("selected");
   //  - changeBorder()

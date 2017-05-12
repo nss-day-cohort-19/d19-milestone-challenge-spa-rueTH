@@ -22,12 +22,9 @@ var CarLot = (function (originalCarLot) {
     console.log(currentTarget.id, "has .selected?", $(currentTarget).hasClass("selected"));
     $(".selected").css("background-color", fatBoy);
     $(".selected").css("border-width", "6px");
+    CarLot.enableInput(currentTarget);
+  };
 
-    CarLot.cursorDirect(currentTarget);
-  };
-  originalCarLot.cursorDirect = function() {
-    console.log("INSIDE cursorDirect()-- everything running until this point");
-  };
 
   return originalCarLot;
 

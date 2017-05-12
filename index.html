@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CarLot</title>
+    
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 <body>
   <nav class="navbar navbar-inverse">
@@ -13,40 +20,26 @@
         <a class="navbar-brand" href="#">CarLot</a>
       </div>
       <div class="navbar-form navbar-left">
-        <input type="text" class="form-control" placeholder="Description Change" id="descriptionInput">
-        <div class="input-group-btn">
+      <!-- add function to add/toggle the disabled boolean attribute within #descriptionInput-->
+        <input type="text" class="form-control" placeholder="Select vehicle to modify description" id="descriptionInput" disabled>
+
         </div>
       </div>
     </div>
   </nav>
-  <div id="container">
-    <div class="row" id="output"></div>
-  </div>
-
-  <!---<div id="car" class="row">-->
-
+  <div class="container" id="container"></div>
   <footer>
     <div class="copyright">
       <h4>&copy;rue.TH</h4>
     </div>
   </footer>
-
-  <!--Add Script Tags in following order:
-      - jQuery (for Bootstrap plugins)
-      - Bootstrap
-      
-      - main.js
-      - carLot.js
-      - <otherIIFE>.js
-      - <otherIIFE>.js
-  -->
   <!-- jQuery for Bootstrap plugins: -->
-  <script
-  src="http://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+  <!-- <script -->
+  <!-- src="http://code.jquery.com/jquery-3.2.1.min.js" -->
+  <!-- integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" -->
+  <!-- crossorigin="anonymous"></script> -->
   <!-- Bootstrap: -->
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 
   <script type="text/javascript" src="javascripts/CarLot.js"></script>
   <script type="text/javascript" src="javascripts/main.js"></script>

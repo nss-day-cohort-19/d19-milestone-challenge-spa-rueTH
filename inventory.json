@@ -5,21 +5,24 @@
       "model": "Rogue",
       "year": "2006",
       "price": "8999",
-      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything.",
+      "image": "images/rogue.jpeg"
     },
     {
       "make": "Toyota",
       "model": "Prius",
       "year": "2006",
       "price": "5",
-      "description": "Sometimes this car drives."
+      "description": "Sometimes this car drives.",
+      "image": "images/prius.jpeg"
     },
     {
       "make": "Ford",
       "model": "Explorer",
       "year": "2005",
       "price": "4567",
-      "description": "Great car to send your kids to college in, even if it doesn't make it back."
+      "description": "Great car to send your kids to college in, even if it doesn't make it back.",
+      "image": "images/explorer.jpeg"
     }
   ]
 }
