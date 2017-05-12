@@ -5,6 +5,9 @@ var CarLot = (function (originalCarLot) {
     var carCards = document.getElementsByClassName("carCards");
     for (var i = 0; i < carCards.length; i++) {
       carCards[i].addEventListener('click', CarLot.cardClick);
+  originalCarLot.cursorDirect = function getFocus() {
+    document.getElementById("descriptionInput").focus();
+  }
       }
     }
 //add a class "selected"
